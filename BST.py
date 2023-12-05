@@ -1,9 +1,15 @@
+# https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+# https://www.geeksforgeeks.org/deletion-in-binary-search-tree/
+# https://www.geeksforgeeks.org/insertion-in-binary-search-tree/?ref=lbp
+# TODO: Jesl juz jest zrobiona klasa node to git, trzeba zroibc klase BST, jesli chodzi o klase Node,uniwersalna albo z dziediczeniem bo jedna bedzie miala wysokosc
+
 class Node:
     # Constructor to create a new node
     def __init__(self, key):
         self.key = key
         self.left = None
         self.right = None
+        # tutaj albo dodac height i parent albo dziediczenie i drugi node, to trzeba do innego pliku
  
 # A utility function to insert
 # a new node with the given key in BST

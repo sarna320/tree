@@ -1,0 +1,1 @@
+# TODO: Zdefiniowac jedna klase node albo dwie i jedna dziediczy

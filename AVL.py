@@ -1,5 +1,9 @@
-# Python program for the above approach
- 
+# https://www.geeksforgeeks.org/insertion-in-an-avl-tree/
+# https://www.geeksforgeeks.org/avl-trees-containing-a-parent-node-pointer/
+# https://www.geeksforgeeks.org/deletion-in-an-avl-tree/?ref=lbp
+
+# TODO: Zrobic rzeczy tak jak w ostatnim linku, tzn klase TreeNode i klase drzewa i potem powrzucac funkcje do klasy
+
 # AVL tree node
 class AVLwithparent:
     def __init__(self, key, parent=None):
