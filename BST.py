@@ -2,7 +2,10 @@
 # https://www.geeksforgeeks.org/deletion-in-binary-search-tree/
 # https://www.geeksforgeeks.org/insertion-in-binary-search-tree/?ref=lbp
 # TODO: Jesl juz jest zrobiona klasa node to git, trzeba zroibc klase BST, jesli chodzi o klase Node,uniwersalna albo z dziediczeniem bo jedna bedzie miala wysokosc
-
+# TODO: Wstawianie
+# TODO: Szukanie
+# TODO: Usuwanie
+# TODO: Wyswietlanie
 class Node:
     # Constructor to create a new node
     def __init__(self, key):

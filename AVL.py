@@ -3,6 +3,9 @@
 # https://www.geeksforgeeks.org/deletion-in-an-avl-tree/?ref=lbp
 
 # TODO: Zrobic rzeczy tak jak w ostatnim linku, tzn klase TreeNode i klase drzewa i potem powrzucac funkcje do klasy
+# TODO: Wstawianie
+# TODO: Szukanie
+# TODO: Wyswietlanie
 
 # AVL tree node
 class AVLwithparent:
