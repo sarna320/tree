@@ -1,6 +1,10 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+
 # TODO: You can additinaly nodes and associate with each node height or balance
+# https://networkx.org/documentation/stable/reference/classes/graph.html
+# G.add_node()
+
 
 # Autor Pawel Sarnacki
 def draw_graph(name="tree", edges=[]):
