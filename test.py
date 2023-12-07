@@ -6,7 +6,7 @@ from draw_graphs import *
 def test_AVL():
     avl_tree_test = AVLTree()
     keys = [10, 3, 2, 1, 6, 4, 7, 20, 30, 12, 23]
-    # source for test: https://eduinf.waw.pl/inf/alg/001_search/0119.php
+    # source for test: https://eduinf.waw.pl/inf/alg/001_search/0119.php https://eduinf.waw.pl/inf/alg/001_search/images/0119_01.gif
     for key in keys:
         avl_tree_test.insert_key(key)
     if [10, 3, 2, 1, 6, 4, 7, 20, 12, 30, 23] == avl_tree_test.get_inorder_traversal():
