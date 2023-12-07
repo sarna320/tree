@@ -1,5 +1,7 @@
 from Node import *
 
+
+# Autor Pawel Sarnacki
 class AVLTree:
     def __init__(self):
         self.root = None
@@ -114,3 +116,25 @@ class AVLTree:
         edges = []
         self.get_edges(self.root, edges)
         return edges
+
+    def get_heights(self, root, heights):
+        if root:
+            heights.append((root.key, root.height))
+            self.get_heights(root.left, heights)
+            self.get_heights(root.right, heights)
+
+    def get_all_heights(self):
+        heights = []
+        self.get_heights(self.root, heights)
+        return heights
+
+    def get_balance_factors(self, root, balance_factors):
+        if root:
+            balance_factors.append((root.key, self.balance_factor(root)))
+            self.get_balance_factors(root.left, balance_factors)
+            self.get_balance_factors(root.right, balance_factors)
+
+    def get_all_balance_factors(self):
+        balance_factors = []
+        self.get_balance_factors(self.root, balance_factors)
+        return balance_factors

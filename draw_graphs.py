@@ -3,21 +3,18 @@ import matplotlib.pyplot as plt
 
 
 # Autor Pawel Sarnacki
-def draw_graph(name="tree",edges=[]):
-
+def draw_graph(name="tree", edges=[]):
     G = nx.Graph()
     node_color_map = []
-    node_color_map.append(
-        "lightgreen"
-    )
+    node_color_map.append("lightgreen")
 
     for edge in edges:
-        G.add_edge(edge[0],edge[1])
+        G.add_edge(edge[0], edge[1])
         node_color_map.append("lightgreen")
-    #print(G.edges)
+    # print(G.edges)
 
     pos = nx.nx_agraph.graphviz_layout(
-        G, prog="dot",root=str(edges[0][0])
+        G, prog="dot", root=str(edges[0][0])
     )  # this gives heap like structure for graph, you need instal graphviz
     #  even if it is not imported in script
     nx.draw_networkx(
