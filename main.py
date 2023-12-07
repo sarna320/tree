@@ -1,14 +1,42 @@
 import random
-
-# TODO: Zrobic cala strukture jak wczesniej, podbna
+from AVL import *
+from draw_graphs import *
+import time
+from draw_plots import *
 
 
 def main():
     list_entry = []
-    for i in range(0, 100000):
-        list_entry.append(random.randint(1, 300000))
+    for i in range(0, 10000):
+        list_entry.append(random.randint(1, 30000))
 
-    number_of_data = list(range(10, 50, 10))
+    number_of_data = list(range(1000, 11000, 1000))
+    time_of_build_AVL = []
+    time_of_search_AVL = []
+    for i in number_of_data:
+        avl_tree = AVLTree()
+        start = time.process_time()
+        for data in list_entry[0:i]:
+            avl_tree.insert_key(data)
+        stop = time.process_time()
+        time_of_build_AVL.append(stop - start)
+        start = time.process_time()
+        for data in list_entry[0:i]:
+            avl_tree.search_key(data)
+        stop = time.process_time()
+        time_of_search_AVL.append(stop - start)
+
+    print(time_of_build_AVL)
+    print(time_of_search_AVL)
+    draw_plots(time_of_build_AVL,number_of_data,"build AVL")
+    draw_plots(time_of_search_AVL,number_of_data,"search AVL")
+
+    avl_tree_test=AVLTree()
+    keys = [10, 3, 2, 1, 6, 4,7,20,12,30,23]
+    for key in keys:
+        avl_tree_test.insert_key(key)
+    print("Inorder traversal:", avl_tree_test.get_inorder_traversal())
+    draw_graph("AVL",avl_tree_test.get_edges_list())
 
 
 if __name__ == "__main__":
