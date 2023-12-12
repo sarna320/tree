@@ -34,10 +34,10 @@ class AVLTree:
 
     def rotate_left(self, x):
         y = x.right
-        T2 = y.left
+        temp = y.left
 
         y.left = x
-        x.right = T2
+        x.right = temp
 
         self.update_height(x)
         self.update_height(y)

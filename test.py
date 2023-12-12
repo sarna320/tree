@@ -43,7 +43,9 @@ def test_AVL():
     ] == avl_tree_test.get_all_balance_factors():
         print("Balance for inorder traversal:", avl_tree_test.get_all_balance_factors())
         print("Test for balance inorder traversal AVL passed")
-    #draw_graph("AVL", avl_tree_test.get_edges_list())
+    draw_graph("AVL", avl_tree_test.get_edges_list())
+    avl_tree_test.insert_key(100)
+    draw_graph("AVL after insertion", avl_tree_test.get_edges_list())
 
 #Autor Piotr Niedziałek
 def test_bst():
@@ -55,11 +57,19 @@ def test_bst():
     bst.insert(34)
     bst.insert(51)
     bst.insert(12)
+    bst.insert(18)
+    bst.insert(30)
+    draw_graph("BST", bst.get_edges_list())
+    bst.insert(123)
+    bst.insert(3)
+    draw_graph("BST after insertons", bst.get_edges_list())
+
     assert bst.root.key == 23
     assert bst.root.right.key == 34
     assert bst.root.left.key == 15
     assert bst.root.left.left.key == 12
     assert bst.root.right.right.key == 51
+
 
     # Test search
     assert bst.search(23).key == 23, "Test failed: 23 not found"
@@ -72,6 +82,7 @@ def test_bst():
 
     # Test delete
     bst.delete(23)
+    draw_graph("BST after deletion", bst.get_edges_list())
     assert bst.search(23) is None
     assert bst.root.key == 34
   

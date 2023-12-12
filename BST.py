@@ -3,6 +3,7 @@ from Node import *
 
 # Autor Piotr Niedziałek
 
+
 class BST:
     def __init__(self):
         self.root = None
@@ -57,6 +58,20 @@ class BST:
 
     def _minValueNode(self, node):
         current = node
-        while(current.left is not None):
+        while current.left is not None:
             current = current.left
         return current
+
+    def get_edges(self, root, edges):
+        if root:
+            if root.left:
+                edges.append((root.key, root.left.key))
+            if root.right:
+                edges.append((root.key, root.right.key))
+            self.get_edges(root.left, edges)
+            self.get_edges(root.right, edges)
+
+    def get_edges_list(self):
+        edges = []
+        self.get_edges(self.root, edges)
+        return edges
