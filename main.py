@@ -33,7 +33,7 @@ def main():
             avl_tree.search_key(data)
         stop = time.process_time()
         time_of_search_AVL.append(stop - start)
-        #BST
+        #BST Piotr Niedzialek
         bst_tree = BST()
         start = time.process_time()
         for data in list_entry[0:i]:
